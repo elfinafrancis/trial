@@ -12,8 +12,10 @@ body
 
 a
 {
+	position: relative;
 	display: inline-block;
 	padding: 15px 30px;
+	color: #2196f3;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	text-decoration: none;
