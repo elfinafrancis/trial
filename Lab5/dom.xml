@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<company>
+	<employee>
+		<ename>Sam</ename>
+		<eemail>samps@gmail.com</eemail>
+		<earea>Pune</earea>
+	</employee>
+	<employee>
+		<ename>Aashita</ename>
+		<eemail>aashitaps@gmail.com</eemail>
+		<earea>Bangalore</earea>
+	</employee>
+	<employee>
+		<ename>Simren</ename>
+		<eemail>simrenps@gmail.com</eemail>
+		<earea>Chennai</earea>
+	</employee>
+</company>
+
+
