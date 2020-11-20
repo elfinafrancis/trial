@@ -3,7 +3,6 @@
     table
     {
      border:1px solid black;
-     text-align: center;
     }
     th{
         font-size:20px;
@@ -41,11 +40,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Branch Details</title>
 </head>
 <body>
     <h1>PropahShop</h1>
-    <button type="button" onclick="loadXML()">Employee Details</button>
+    <button type="button" onclick="loadXML()">Branch Details</button>
     <br><br>
     <table id="demo"></table>
     <script>
@@ -66,16 +65,18 @@
         {
             var i;
             var xmlDoc=xml.responseXML;
-            var t="<tr><th>NAME</th><th>EMAIL</th><th>AREA</th></tr>";
-            var x=xmlDoc.getElementsByTagName("employee");
+            var t="<tr><th>NAME</th><th>EMAIL</th><th>AREA</th><th>MOB NO.</th></tr>";
+            var x=xmlDoc.getElementsByTagName("branch");
             for(i=0;i<x.length;i++)
             {
                 t +="<tr><td>" +
-                x[i].getElementsByTagName("ename")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
                 "</td><td>" +
-                x[i].getElementsByTagName("eemail")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
                 "</td><td>" +
-                x[i].getElementsByTagName("earea")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("area")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue +
                 "</td></tr>";
             }
             document.getElementById("demo").innerHTML=t;
