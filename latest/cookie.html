@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+var myCookies = {};
+
+function saveCookies()
+{
+  myCookies["_user"] = document.getElementById("user").value;
+  myCookies["_uage"] = document.getElementById("age").value.toString();
+  myCookies["_gender"] = document.getElementById("gender").value;
+  myCookies["_phone"] = document.getElementById("phone").value;
+  myCookies["_email"] = document.getElementById("email").value;
+  myCookies["_password"] = document.getElementById("password").value;
+
+  document.cookie = "";
+  var expiresAttrib = new Date(Date.now()+60*1000).toString();
+  var cookieString = "";
+  for (var key in myCookies)
+  {
+    cookieString = key+"="+myCookies[key]+";"+expiresAttrib+";";
+    document.cookie = cookieString;
+  }
+
+  document.getElementById("out").innerHTML = document.cookie;
+}
+
+function loadCookies()
+{
+  myCookies = {};
+  var kv = document.cookie.split(";");
+  for (var id in kv)
+  {
+    var cookie = kv[id].split("=");
+    myCookies[cookie[0].trim()] = cookie[1];
+  }
+  
+  document.getElementById("user").value = myCookies["_user"];
+  document.getElementById("age").value = myCookies["_uage"];
+  document.getElementById("gender").value = myCookies["_gender"];
+  document.getElementById("phone").value = myCookies["_phone"];
+  document.getElementById("email").value = myCookies["_email"];
+  document.getElementById("password").value = myCookies["_password"];
+}
+
+</script>
+</head>
+<body>
+<p>Name<br><input type="text" id="user" placeholder="Name"></p></br>
+<p>Date of Birth<br><input type="tel" id="age" placeholder="Date of birth"></p></br>
+<p>Gender<br><input type="text" id="gender" placeholder="Gender"></p></br>
+<p>Phone Number<br><input type="tel" id="phone" placeholder="Phone number"></p></br>
+<p>Email ID<br><input type="email" id="email" placeholder="Email ID"></p></br>
+<p>Password<br><input type="password" id="password" placeholder="Password"></p></br>
+<button onclick="saveCookies()">Save information</button>
+<button onclick="loadCookies()">Load information</button>
+<p><input class="button" type="submit" value="Submit" name="Submit">     
+    <input class="button" type="reset" value="Reset" name="Reset">   
+  </p>
+<p id="out"></p>
+</body>
+</html>
