@@ -8,11 +8,11 @@ var myCookies = {};
 function saveCookies()
 {
   myCookies["_user"] = document.getElementById("user").value;
-  myCookies["_uage"] = document.getElementById("age").value.toString();
+  myCookies["_uage"] = document.getElementById("age").value;
   myCookies["_gender"] = document.getElementById("gender").value;
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
-  myCookies["_password"] = document.getElementById("password").value;
+  myCookies["_password"] = document.getElementById("password").value.toString();
 
   document.cookie = "";
   var expiresAttrib = new Date(Date.now()+60*1000).toString();
@@ -47,7 +47,7 @@ function loadCookies()
 function validation()                                    
 { 
   myCookies["_user"] = document.getElementById("user").value;
-  myCookies["_uage"] = document.getElementById("age").value.toString();
+  myCookies["_uage"] = document.getElementById("age").value;
   myCookies["_gender"] = document.getElementById("gender").value;
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
