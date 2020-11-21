@@ -44,59 +44,6 @@ function loadCookies()
   document.getElementById("password").value = myCookies["_password"];
 }
 
-function validation()                                    
-{ 
-  myCookies["_user"] = document.getElementById("user").value;
-  myCookies["_uage"] = document.getElementById("age").value;
-  myCookies["_gender"] = document.getElementById("gender").value;
-  myCookies["_phone"] = document.getElementById("phone").value;
-  myCookies["_email"] = document.getElementById("email").value;
-  myCookies["_password"] = document.getElementById("password").value;
-
-    if (user.value == "")                                  
-    { 
-        window.alert("Please enter your name."); 
-        user.focus(); 
-        return false; 
-    }
-
-    if (age.value == "")                                  
-    { 
-        window.alert("Please enter your date of birth"); 
-        age.focus(); 
-        return false; 
-    } 
-
-    if (gender.selectedIndex < 1)                  
-    { 
-        alert("Please choose your gender"); 
-        gender.focus(); 
-        return false; 
-    } 
-
-    if (phone.value == "")                           
-    { 
-        window.alert("Please enter your phone number."); 
-        phone.focus(); 
-        return false; 
-    } 
-       
-    if (email.value == "")                                   
-    { 
-        window.alert("Please enter a valid e-mail address."); 
-        email.focus(); 
-        return false; 
-    } 
-
-    if (password.value == "")                        
-    { 
-        window.alert("Please set your password"); 
-        password.focus(); 
-        return false; 
-    } 
-    return true; 
-}
-
 </script>
 </head>
 <body>
@@ -116,8 +63,7 @@ function validation()
 <p>Email ID<br><input type="email" id="email" placeholder="Email ID"></p></br>
 <p>Password<br><input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase letter, one lowercase letter, and at least 8 or more characters"></p></br>
 <button onclick="saveCookies()">Save information</button>
-<button onclick="loadCookies()">Load information</button> 
-<p><input class="button" type="reset" value="Reset" name="Reset"></p>  
+<button onclick="loadCookies()">Load information</button>  
 <p id="out"></p>
 </form>
 </body>
