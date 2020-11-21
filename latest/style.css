@@ -38,3 +38,13 @@ button {
     margin: 10px;
     width: 30%;
 }
+
+.button {
+    background-color: #FFFF99;
+    border: 2px solid black;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+}
