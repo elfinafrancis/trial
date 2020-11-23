@@ -5,10 +5,10 @@
 	<title>Form</title>
 	<script>
 		const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+        const username = document.getElementById('username');
+		const email = document.getElementById('email');
+		const password = document.getElementById('password');
+		const password2 = document.getElementById('password2');
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -74,7 +74,7 @@ function isEmail(email) {
 	<div class="header">
 		<h2>Create Account</h2>
 	</div>
-	<form id="form" class="form">
+	<form id="form" class="form" onsubmit="return checkInputs()" method="post">
 		<div class="form-control">
 			<label for="username">Username</label>
 			<input type="text" placeholder="florinpop17" id="username" />
