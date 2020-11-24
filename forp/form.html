@@ -14,6 +14,7 @@ function saveCookies()
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
   myCookies["_password"] = document.getElementById("password").value.toString();
+  myCookies["confirm_password"] = document.getElementById("confirm_password").value.toString();
 
   document.cookie = "";
   var expiresAttrib = new Date(Date.now()+60*1000).toString();
@@ -43,6 +44,7 @@ function loadCookies()
   document.getElementById("phone").value = myCookies["_phone"];
   document.getElementById("email").value = myCookies["_email"];
   document.getElementById("password").value = myCookies["_password"];
+  document.getElementById("confirm_password").value = myCookies["confirm_password"];
 }
 
 function validation()                                    
@@ -53,6 +55,7 @@ function validation()
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_email"] = document.getElementById("email").value;
   myCookies["_password"] = document.getElementById("password").value;
+  myCookies["confirm_password"] = document.getElementById("confirm_password").value;
 
     if (user.value == "")                                  
     {
@@ -93,6 +96,13 @@ function validation()
     {
         window.alert("Please set your password");
         password.focus();
+        return false;
+    }
+
+    if (confirm_password.value == "")                        
+    {
+        window.alert("Please confirm your password");
+        confirm_password.focus();
         return false;
     }
     return true;
