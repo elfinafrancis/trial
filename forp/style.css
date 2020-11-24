@@ -29,14 +29,18 @@ form {
     padding: 30px 40px; 
 }
 
-button {
+button{
     background-color: #FFFF99;
     border: 2px solid black;
     color: black;
     font-size: 14px;
     padding: 5px;
-    margin: 10px 250px;
+    margin: 10px;
     width: 10%;
+}
+
+div{
+    margin: 5px 300px;
 }
 
 .button {
