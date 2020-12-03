@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sShop</title>
     <h1 id="demo"></h1>
     <script>
         function load()
@@ -26,8 +26,9 @@
                 if(request.readyState==4)
                 {
                     var obj=JSON.parse(request.responseText);
-                    document.getElementById("date").innerHTML=obj.date;
-                    document.getElementById("time").innerHTML=obj.time;
+                    document.getElementById("price").innerHTML=obj.price;
+                    document.getElementById("colour").innerHTML=obj.colour;
+                    document.getElementById("mat").innerHTML=obj.mat;
                 }
             };
             request.open("GET","wsd.json",true);
@@ -48,7 +49,8 @@
 <body>
     <button type="button" onclick="load()">Load Information</button>
     <br>
-    Date:<span id="date"></span><br>
-    Time:<span id="time"></span><br>
+    Price:<span id="price"></span><br>
+    Colour:<span id="colour"></span><br>
+    Material:<span id="mat"></span><br>
 </body>
 </html>
