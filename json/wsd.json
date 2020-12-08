@@ -1,5 +1,11 @@
 {
-	"price": "399",
-	"colour": "Wine Red",
-	"mat": "Cotton"
+	"price1": "399",
+	"colour1": "Wine Red",
+	"mat1": "Cotton"
+}
+
+{
+	"price2": "399",
+	"colour2": "Green",
+	"mat2": "Nylon"
 }
