@@ -1,13 +1,13 @@
 angular.module("MyApp",[])
 .controller("MyCtrl",function($scope)
 {
-    var employees=[
-        {name:'Rithul',dob:new Date("July 21,1990"),gender:"Male",salary:55000.778},
-        {name:'Indu',dob:new Date("July 20,1987"),gender:"Female",salary:65000.778},
-        {name:'Kevin',dob:new Date("November 19,1983"),gender:"Male",salary:55000.778},
-        {name:'Reena',dob:new Date("August 21,1990"),gender:"Male",salary:55000.778}
+    var customers=[
+        {name:'Sam',dob:new Date("January 5,1990"),gender:"Male",state:Karnataka,phone:55000.778},
+        {name:'Aashita',dob:new Date("June 24,1987"),gender:"Female",state:Maharashtra,phone:55000.778},
+        {name:'Kiran',dob:new Date("November 13,1991"),gender:"Male",state:Tamil Nadu,phone:55000.778},
+        {name:'Lenoy',dob:new Date("March 6,1979"),gender:"Male",state:Karnataka,phone:55000.778}
     ];
-    console.log(employees);
-    $scope.employees=employees;
+    console.log(customers);
+    $scope.customers=customers;
     $scope.rowlimit=4;
 });

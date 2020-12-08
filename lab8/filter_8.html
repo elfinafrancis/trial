@@ -14,7 +14,7 @@
         <br \>
         <br \>
 
-        Search:<input type="text" placeholder="Seach Employees" ng-model="Search" />
+        Search:<input type="text" placeholder="Seach Customer" ng-model="Search" />
         <br \>
         <br \>
         <table>
@@ -22,16 +22,16 @@
                 <th>Name</th>
                 <th>DOB</th>
                 <th>Gender</th>
-                <th>Salary(number)</th>
-                <th>Salary(currency)</th>
+                <th>State</th>
+                <th>Email ID</th>
             </tr>
             <tbody>
-                <tr ng-repeat="employee in employees | limitTo:rowlimit |filter:Search ">
-                    <td>{{employee.name | uppercase}}</td>
-                    <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
-                    <td>{{employee.gender | lowercase}}</td>
-                    <td>{{employee.salary | number:0}}</td>
-                    <td> {{employee.salary | currency:"&#8377;":0 }}</td>
+                <tr ng-repeat="customer in customers | limitTo:rowlimit |filter:Search ">
+                    <td>{{customer.name | uppercase}}</td>
+                    <td>{{customer.dob | date:"dd/MM/yyyy"}}</td>
+                    <td>{{customer.gender | lowercase}}</td>
+                    <td>{{customer.state | uppercase}}</td>
+                    <td>{{customer.phone | number}}</td>
                 </tr>
             </tbody>
         </table>
