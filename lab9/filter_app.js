@@ -1,7 +1,7 @@
 angular.module('myapp',[])
 .controller('myctrl',function($scope)
 {
-    $scope.listCourses=[
+    $scope.listProduct=[
         {id:'P01',name:'Skirt',price:5000,piece:72},
         {id:'P02',name:'Swearer',price:3455,piece:48},
         {id:'P03',name:'Shirt',price:4205,piece:36},
