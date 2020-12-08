@@ -5,38 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="angular.min.js"></script>
-    <script src="product.js"></script>
+    <script src="course.js"></script>
+    <link href="filter.css" rel="stylesheet">
 </head>
 <body ng-app="myapp" ng-controller="myctrl">
+   <h3>Course Information</h3>
     <table cellpadding="2" cellspacing="2" border="1">
         <tr>
             <th>Index</th>
-            <th>PID</th>
-            <th>NAME</th>
+            <th>COURSE ID</th>
+            <th>COURSE NAME</th>
             <th>PRICE</th>
-            <th>QUANTITY</th>
+            <th>NUMBER OF HOURS</th>
             <th>OPTIONS</th>
         </tr>
-        <tr ng-repeat="product in listProducts">
+        <tr ng-repeat="course in listCourses">
             <td>{{$index}}</td>
-            <td>{{product.id}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.quantity}}</td>
+            <td>{{course.id}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.price | currency:"&#8377;":0}}</td>
+            <td>{{course.hours}}</td>
             <td>
                 <a href="#" ng-click="delete()">Delete</a> |
-                <a href="#" ng-click="edit(product.id)">Edit</a>
+                <a href="#" ng-click="edit(course.id)">Edit</a>
             </td>
         </tr>
     </table>
-    <h3>Product Information</h3>
+    <h3>Course Addition/Modification</h3>
+   
     <table cellpadding="2" cellspacing="2">
         <tr>
-            <td>ID</td>
+            <td>COURSE ID</td>
             <td><input type="text" ng-model="id"></td>
         </tr>
         <tr>
-            <td>NAME</td>
+            <td>COURSE NAME</td>
             <td><input type="text" ng-model="name"></td>
         </tr>
         <tr>
@@ -44,8 +47,8 @@
             <td><input type="text" ng-model="price"></td>
         </tr>
         <tr>
-            <td>QUANTITY</td>
-            <td><input type="text" ng-model="quantity"></td>
+            <td>NUMBER OF HOURS</td>
+            <td><input type="text" ng-model="hours"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
